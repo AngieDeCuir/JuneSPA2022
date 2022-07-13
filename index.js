@@ -1,14 +1,21 @@
-import * as components from "./components";
+import { Header, Nav, Main, Footer } from "./components";
+
 function render() {
-  document.querySelector()
-    ${Nav ()}
+  document.querySelector("#root").innerHTML = `
+    ${Header()}
+    ${Nav()}
+    ${Main()}
+    ${Footer()}
+  `;
 
+  afterRender();
+}
 
-    `
+render();
 
-
-
-// add menu toggle to bars icon in nav bar
-document.querySelector(".fa-bars").addEventListener("click", () => {
-  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-});
+function afterRender() {
+  // add menu toggle to bars icon in nav bar
+  document.querySelector(".fa-bars").addEventListener("click", () => {
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  });
+}
